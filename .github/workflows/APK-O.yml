@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Clone Project
-        run: git clone -b main --depth=1 https://github.com/chengxue2020/q215613905-Tbox
+        run: git clone -b main --depth=1 https://github.com/hfr1107/HomeBox
       - name: DIY
         run: |
           chmod +x diy-J.sh
