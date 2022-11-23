@@ -1,4 +1,4 @@
-name: APK-TV
+name: APK-TV Build
 
 on:
   schedule:
