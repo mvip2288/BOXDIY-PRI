@@ -82,6 +82,10 @@ jobs:
         with:
           name: ${{ env.tag }}-source
           path: ${{ env.repoName }}/*-source.zip
+       - name: DIY
+        run: |
+          chmod +x diy-TV.sh
+          bash ${{ github.workspace }}/diy-TV.sh
   build:
     needs: prepare
     if: needs.prepare.outputs.tag
