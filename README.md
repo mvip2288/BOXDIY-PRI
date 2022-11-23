@@ -1,11 +1,10 @@
-# TVBoxDIY
+# TVBoxOSC
 
-Fork：https://github.com/CatVodTVOfficial/TVBoxOSC.git
+![Build](https://shields.io/github/workflow/status/xinyi1984/PY/Test?logo=github&label=Build)
+[![Channel](https://img.shields.io/badge/Follow-Telegram-blue.svg?logo=telegram)](https://t.me/TVBoxOSC_PY)
+[![Download](https://img.shields.io/github/v/release/xinyi1984/PY?color=orange&logoColor=orange&label=Download&logo=DocuSign)](https://github.com/xinyi1984/PY/releases/latest) 
+[![Total](https://shields.io/github/downloads/xinyi1984/PY/total?logo=Bookmeter&label=Counts&logoColor=yellow&color=yellow)](https://github.com/xinyi1984/PY/releases)
 
-源码：https://github.com/lm317379829/TVBoxOSC.git
-
-# 说明
-
-APK-J Build为本地爬虫-俊版，APK-T Build为本地爬虫taka版，APK-O Build为本地爬虫原版。APK-TV Build为本地爬虫Fongmi/TV版（暂时有问题，待修复）。
-
-diy-J.sh、diy-T.sh、diy-O.sh、diy-TV.sh分别为俊版、taka版、原版自定义脚本，可自行修改apk名、背景、图标以及其他源码内容。
+## Credits
+This repo relies on the following third-party projects:
+- [xinyi1984/TVBoxOS](https://github.com/xinyi1984/TVBoxOS) (Updated: a6f88ba298c94c86847d13793c5ac59d5e248219)
