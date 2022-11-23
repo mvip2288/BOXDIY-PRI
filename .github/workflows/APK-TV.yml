@@ -170,6 +170,5 @@ jobs:
           files: |
             apk/*.apk
             apk/*-source.zip
-                    
-            fi
-          fi
+
+        
