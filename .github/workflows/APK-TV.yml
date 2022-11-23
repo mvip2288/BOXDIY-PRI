@@ -172,15 +172,4 @@ jobs:
             apk/*-source.zip
         env:
           HUB_TOKEN: ${{ secrets.HUB_TOKEN }} 
-      - name: Post To Telegram
-        working-directory: apk/
-        run: |
-          if [ -n "${{ secrets.CHANNEL_ID }}" ] && [ -n "${{ secrets.BOT_TOKEN }}" ]; then
-            export apk1=$(find ~ -name "*leanback*.apk")
-            export sourceCode=$(find ~ -name "*-source.zip")
-            if [ -s "$apk2" ]; then
-              curl -v "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMediaGroup?chat_id=${{ secrets.CHANNEL_ID }}&media=%5B%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2Fapk1%22%7D%2C%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2Fapk2%22%7D%2C%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2FsourceCode%22%2C%20%22caption%22%3A%22Commit%3A%20${{ env.commit }}%0AChangelog%3A%0A${{ env.ESCAPED }}%22%2C%22parse_mode%22%3A%20%22Markdown%22%7D%5D" -F apk1="@$apk1" -F apk2="@$apk2" -F sourceCode="@$sourceCode"
-            else
-              curl -v "https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMediaGroup?chat_id=${{ secrets.CHANNEL_ID }}&media=%5B%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2Fapk1%22%7D%2C%7B%22type%22%3A%22document%22%2C%20%22media%22%3A%22attach%3A%2F%2FsourceCode%22%2C%20%22caption%22%3A%22Commit%3A%20${{ env.commit }}%0AChangelog%3A%0A${{ env.ESCAPED }}%22%2C%22parse_mode%22%3A%20%22Markdown%22%7D%5D" -F apk1="@$apk1" -F sourceCode="@$sourceCode"
-            fi
-          fi
+      - 
