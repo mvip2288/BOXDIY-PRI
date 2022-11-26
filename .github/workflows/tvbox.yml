@@ -24,8 +24,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: gexiaopeng
-            repoName: TVBoxOS
+          - userName: leftchest
+            repoName: Boxj
             branchName: main
         
     steps:
