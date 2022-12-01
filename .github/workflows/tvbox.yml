@@ -25,7 +25,7 @@ jobs:
       matrix:
         include:
           - userName: leftchest
-            repoName: Boxj
+            repoName: TVBoxOS
             branchName: main
         
     steps:
