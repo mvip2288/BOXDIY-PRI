@@ -76,6 +76,12 @@ jobs:
             ESCAPED="$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1]))" "$COMMIT_URL")"
           fi
           echo "ESCAPED=$ESCAPED" >> $GITHUB_ENV
+      - name: Upload Sourcecode To Artifact
+        uses: actions/upload-artifact@v3
+        if: ${{ env.commit }}
+        with:
+          name: ${{ env.tag }}-source
+          path: ${{ env.repoName }}/*-source.zip
   build:
     needs: prepare
     if: needs.prepare.outputs.tag
