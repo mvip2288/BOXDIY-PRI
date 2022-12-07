@@ -18,19 +18,16 @@ on:
         required: false
         type: boolean
 
-env:
-  userName: leftchest
-  repoName: TV
-  branchName: release
-  appName: TV
-
 jobs:
-  prepare:
+  build:
     runs-on: ubuntu-latest
-    outputs:
-      commit: ${{ env.commit }}
-      tag: ${{ env.tag }}
-      ESCAPED: ${{ env.ESCAPED }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - userName: leftchest
+            repoName: TV
+            branchName: release
     steps:
       - name: Checkout
         uses: actions/checkout@v3
