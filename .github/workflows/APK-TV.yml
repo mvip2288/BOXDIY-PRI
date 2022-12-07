@@ -22,7 +22,6 @@ env:
   userName: leftchest
   repoName: TV
   branchName: release
-  appName: TV
 
 jobs:
   prepare:
